@@ -1,0 +1,187 @@
+/* navbar */
+.navbar-brand {
+  font-family: "Merienda", cursive;
+  font-weight: 800;
+  font-size: 32px;
+}
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 12px;
+}
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+.navbar a.tombol {
+  color: black;
+  background-color: #297ff7;
+}
+.navbar a.tombol:hover {
+  background-color: #0b63dc;
+}
+
+/* jumbotron */
+.jumbotron {
+  background-image: url(img/jumbotron-bg.jpg);
+  height: 540px;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.jumbotron::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  bottom: 0;
+}
+.jumbotron .container {
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.jumbotron .display-4 {
+  font-weight: 200;
+  font-size: 2.6em;
+  margin-top: 100px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+}
+
+.jumbotron .display-4 span {
+  font-weight: 500;
+}
+
+/* Utility */
+.tombol {
+  border-radius: 40px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* panel */
+.info-panel {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  margin-top: -70px;
+  z-index: 3;
+}
+.info-panel h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.info-panel p {
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: #8f9091;
+}
+
+/* workspace */
+.workingspace {
+  margin-top: 120px;
+  text-align: center;
+}
+.workingspace img {
+  margin-bottom: 20px;
+}
+.workingspace h2 {
+  font-weight: 200;
+  font-size: 3.5em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.workingspace h2 span {
+  font-weight: 500;
+}
+.workingspace p {
+  font-size: 1.2em;
+  font-weight: 200;
+  color: #8f9091;
+}
+
+/* Testimonial */
+.testimonial {
+  margin-top: 150px;
+}
+.testimonial p {
+  font-size: 1.8em;
+  text-align: center;
+  font-style: italic;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+.testimonial img:hover {
+  width: 100px;
+  height: 100px;
+  margin-top: -5px;
+  filter: grayscale(0%);
+}
+.testimonial .info-text {
+  margin-top: 20px;
+}
+.testimonial .info-text h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.testimonial .info-text p {
+  font-size: 12px;
+  margin-top: -5px;
+  color: #acacac;
+  font-style: normal;
+}
+
+/* Media Queri */
+@media (min-width: 992px) {
+  .navbar {
+    padding-top: 20px;
+  }
+  .navbar-brand,
+  .nav-link {
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #0b63dc;
+    margin: auto;
+    margin-bottom: -8px;
+    width: 50%;
+    padding-top: 5px;
+  }
+  .jumbotron {
+    margin-top: -90px;
+    height: 640px;
+  }
+
+  .jumbotron .display-4 {
+    font-size: 5em;
+    margin-top: 150px;
+  }
+
+  .workingspace {
+    text-align: start;
+  }
+  .testimonial p {
+    font-size: 2em;
+  }
+}
